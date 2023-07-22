@@ -54,8 +54,6 @@ void runBackward() {
 }
 
 void loop() {
-  bool end = false;
-  if(end == false){
     for(int i = 0; i < 5; i++) {
     if(i == 4) {
       randomSeed(analogRead(A0));
@@ -65,16 +63,6 @@ void loop() {
       delay(5000);
       digitalWrite(LEDPinArray[stopAt], LOW);
       exit(0);
-    } else {
-      runForward();
-      pause = pause+10;
-      runBackward();
-      pause = pause+10;
     }
-    
   }
-  }
-
-  
-  
 }
